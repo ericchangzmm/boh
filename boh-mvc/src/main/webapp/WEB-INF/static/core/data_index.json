@@ -1,0 +1,29 @@
+{
+	"menu":[
+		{
+			"title": "库存",
+			"list": [
+				{
+					"id": "1",
+					"name": "盘点",
+					"icon": "public1.0/images/p-inventory1.png"
+				},
+				{
+					"id": "2",
+					"name": "频率设置",
+					"icon": "public1.0/images/p-inventory2.png"
+				}
+			]
+		},
+		{
+			"title": "财务",
+			"list": [
+				{
+					"id": "5",
+					"name": "日结",
+					"icon": "public1.0/images/p-finance1.png"
+				}
+			]
+		}
+	]
+}

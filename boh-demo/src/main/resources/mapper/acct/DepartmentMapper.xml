@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Department">
+
+	<sql id="Base_Order">
+		<if test="orderString != null and orderString != ''">
+			ORDER BY ${orderString}
+		</if>
+	</sql>
+	
+	<sql id="Base_Page">
+		<include refid="Base_Order"/>
+		LIMIT #{pageOffset} , #{pageSize}
+	</sql>
+	
+	<resultMap id="departmentDetailMap" type="Department">
+		<id property="id" column="department_id" />
+		<result property="name" column="department_name" />
+		<association property="manager" column="manager_id" javaType="User">
+			<id property="id" column="manager_id" />
+			<result property="name" column="manager_name" />
+			<result property="email" column="manager_email" />
+		</association>
+		<collection property="userList" javaType="User">
+			<id property="id" column="user_id" />
+			<result property="name" column="user_name" />
+			<result property="email" column="user_email" />
+		</collection>
+	</resultMap>
+	
+	<!-- 获取部门详细信息, 输出用resultMap关联嵌套对象 -->
+	<select id="getDepartmentDetail" parameterType="int" resultMap="departmentDetailMap">
+		select d.id as department_id,
+		d.name as
+		department_name,
+		m.id as
+		manager_id,
+		m.name as manager_name,
+		m.email as manager_email,
+		u.id as user_id,
+		u.name as user_name,
+		u.email as user_email
+		from acct_department d, acct_user m, acct_user u
+		where d.manager_id=m.id and d.id=u.department_id
+		and d.id=#{id}
+	</select>
+
+</mapper> 

@@ -1,0 +1,11 @@
+{
+	"success": true,
+	"object":{
+		"id": "sdkfhjksdjg235djfh",
+		"name": "candy",
+		"realname": "刘彩娟",
+		"email": "liucaijuan2008@126.com",
+		"telphone": "18051734708"	
+	},
+	"message": "登录成功"
+}

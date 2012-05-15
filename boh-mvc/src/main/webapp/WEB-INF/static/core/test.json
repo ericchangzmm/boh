@@ -1,0 +1,33 @@
+{
+	"menu":[
+		{
+			"name": "人力资源管理",
+		    "icon": "/moduleresources/module.finance.web/resources/images/b-mnue-1.png",
+		    "link": "PERSONNEL"
+		},
+		{
+			"name": "餐厅信息",
+		    "icon": "/moduleresources/module.finance.web/resources/images/b-mnue-1.png",
+		    "link": "STORE"
+		},
+		{
+			"name": "库存管理",
+		    "icon": "/moduleresources/module.finance.web/resources/images/b-mnue-1.png",
+		    "link": "STOCK"
+		},
+		{
+			"name": "财务系统",
+		    "icon": "/moduleresources/module.finance.web/resources/images/b-mnue-1.png",
+		    "link": "FINANCE"
+		},
+		{
+			"name": "预估",
+		    "icon": "/moduleresources/module.finance.web/resources/images/b-mnue-1.png",
+		    "link": "ESTIMATE"
+		}
+	],
+	"userName":"王梦香",
+	"userId":"123321",
+	"infoId":3,
+	"infoNumber":22
+}
